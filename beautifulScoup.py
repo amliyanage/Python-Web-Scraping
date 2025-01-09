@@ -6,7 +6,7 @@ response = requests.get(url)
 
 if response.status_code == 200 :
     scoup = BeautifulSoup(response.text,'html.parser')
-    title = scoup.h1
+    title = scoup.title
     print(title.text)
 
 else :
